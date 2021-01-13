@@ -42,7 +42,7 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
         if (l2 != NULL)
             l2 = l2->next;
         
-        if (carry == 1)
+        if (carry == 1)     // 對於最後一個迴圈，如果carry==1，也就是還有進位這一項時，new一個Node
             rear->next = newNode(1);
     }
     return head;
